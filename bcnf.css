@@ -1,0 +1,113 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    display: grid;
+    margin: 20px;
+    font-family: monospace, monospace;
+    justify-items: center;
+    background-color: light-dark(white, #101010);
+    color: light-dark(black, rgb(225, 225, 225));
+}
+
+h1 {
+    margin: 20px 0 0 0;
+}
+
+.content {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content, .content > * {
+    width: clamp(300px, 800px, 100%);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: min-content auto;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+ol {
+    list-style: lower-alpha;
+    padding-left: 35px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 35px;
+}
+
+.separator {
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.relation-title {
+    padding: 0;
+    padding-left: 10px;
+    border-left: 2px solid light-dark(black, white);
+}
+
+#solutions {
+    list-style: circle;
+    margin: 0;
+}
+
+.relation-title > div >w span,
+.solution > span {
+    font-weight: bold;
+}
+
+.solution > span             { color: green; }
+.relation-title > div > span { color: purple; font-weight: bold; }
+
+.solution {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.recursion {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.relation-title:last-child {
+    margin-top: 10px;
+}
+.relation-title > ol > li {
+    padding-top: 10px;
+}
+
+.initial {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    padding-left: 0;
+}
+.hidden {
+    display: none;
+}
+
+.form > button {
+    grid-column: 1 / 3;
+    background-color: light-dark(white, grey);
+    color: light-dark(black, white);
+    cursor: pointer;
+}
+
+.form > input[type=text] {
+    background-color: light-dark(white, #606060);
+    color: light-dark(black, white);
+}
+
+hr {
+    border-color: light-dark(black, white);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCNF Solver</title>
+    <link rel="stylesheet" href="bcnf.css">
+</head>
+<body>
+    <div class="content">
+        <h1>BCNF Solver</h1>
+        <p style="font-size: small;">This tool decomposes a relation to satisfy the Boyce-Codd normal form.</p>
+        <div>
+            <div class="form">
+                <label for="attributes">Attributes</label>
+                <input id="attributes" type="text" placeholder="Attributes" value="A,B,C,D,E,F">
+                <label for="fds">FDs</label>
+                <input id="fds" type="text" placeholder="FDs" value="A,E->C,F; B-> F; C->B; C,D,E->A; F->D,E">
+                <button onclick="parseAndSolve()">Solve</button>
+            </div>
+            <hr class="separator">
+            <h2 class="hidden">Solution</h2>
+            <div id="solutions-container" class="relation-title solution hidden">
+                <span>Decomposed relations</span>
+                <ul id="solutions"></ul>
+            </div>
+            <h2 class="hidden">Steps</h2>
+            <ul class="initial" id="bcnf"></ul>
+        </div>
+    </div>
+    <script src="bcnf.js" />
+</body>
+</html>
