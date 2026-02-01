@@ -2,6 +2,8 @@
 
 A TypeScript implementation for decomposing a relation to satisfy the Boyce-Codd normal form. The algorithm is based on the theory in Ullman and Widom (2014).
 
+Available at: [quotientive.github.io/bcnf-ts/](https://quotientive.github.io/bcnf-ts/)
+
 
 ## References
 

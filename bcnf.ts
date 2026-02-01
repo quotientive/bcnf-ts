@@ -358,6 +358,7 @@ function bcnfSolve(it: HTMLElement[], R: Relation): Array<Relation> {
 
 
 function relationFromString(attrStr: string, fdStr: string): Relation {
+    // todo: add error handing for better ux
     const splitAndTrim = (str: string) => str.split(',').map((s) => s.trim())
     try {
         const newAttribs = new Set<Attrib>(splitAndTrim(attrStr))
